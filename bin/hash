@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+
+$autoload = __DIR__ . '/../vendor/autoload.php';
+
+if (!file_exists($autoload)) {
+    die("You need to run 'composer install --no-dev' first !" . PHP_EOL);
+}
+
+require_once $autoload;
+
+$app = new Sugarcrm\PasswordHash\Application();
+$app->run();
+

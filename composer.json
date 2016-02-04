@@ -1,0 +1,35 @@
+{
+    "name" : "sugarcrm/password_hash",
+    "description" : "SugarCRM Password Hash Utility",
+    "type" : "library",
+    "license" : "MIT",
+    "homepage" : "http://www.sugarcrm.com",
+    "support": {
+        "wiki" : "http://support.sugarcrm.com",
+        "forum": "https://community.sugarcrm.com/sugarcrm",
+        "irc": "irc://irc.freenode.org/sugarcrm"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Sugarcrm\\PasswordHash\\": [
+                "src/"
+            ]
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sugarcrm\\PasswordHash\\Tests\\": [
+                "tests/"
+            ]
+        }
+    },
+    "require": {
+        "ircmaxell/password-compat": "^1.0",
+        "symfony/console": "^2.8",
+        "php": ">=5.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8"
+    }
+}
