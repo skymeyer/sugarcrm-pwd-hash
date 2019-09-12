@@ -1,11 +1,19 @@
 <?php
 
-namespace Sugarcrm\PasswordHash;
+/*
+ * This file is part of the skymeyer/sugarcrm-pwd-hash package.
+ *
+ * (c) Jelle Vink <jelle.vink@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace Skymeyer\Sugarcrm\PasswordHash;
 
 /**
  *
- * Generate password hashes compatible with SugarCRM 7.7 and up. This library
- * can be embedded in other tooling.
+ * Generate password hashes compatible with SugarCRM 7.7 and up.
  *
  * Both BCRYPT and SHA2 are supported. Consult the SugarCRM's documentation to
  * learn more about the configuration options and the re-hashing functionality.
@@ -70,7 +78,7 @@ class Hash
      */
     protected function getRandom($bytes)
     {
-        $random = base64_encode(mcrypt_create_iv($bytes, MCRYPT_DEV_URANDOM));
+        $random = base64_encode(random_bytes($bytes));
 
         // binary safe substring
         if (function_exists('mb_substr')) {
