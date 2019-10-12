@@ -1,4 +1,4 @@
-# SugarCRM Password Hash Utility
+# SugarCRM Password Hash Utility [![Build Status](https://travis-ci.com/skymeyer/sugarcrm-pwd-hash.svg?branch=master)](https://travis-ci.com/skymeyer/sugarcrm-pwd-hash)
 
 This CLI tool generates SugarCRM compatible password hashes for SugarCRM 7.7
 and up which can be stored in SugarCRM's database directly.
